@@ -30,6 +30,6 @@ jobs:
         image: rssharma/rahul-docker-repo
         tags: v1, latest
         registry: docker.io
-        dockerfile: Dockerfile.ci
+        dockerfile: ./code/office/demos/demo/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
