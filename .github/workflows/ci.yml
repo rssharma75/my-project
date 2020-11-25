@@ -23,13 +23,15 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x code/office/demos/demo/gradlew
     - name: Build with Gradle
-      run: ./code/office/demos/demo/gradlew build
-    - name: Build and push docker image
-      uses: mr-smithers-excellent/docker-build-push@v5
-      with:
-        image: rssharma/rahul-docker-repo
-        tags: v1, latest
-        registry: docker.io
-        dockerfile: ./code/office/demos/demo/Dockerfile
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+      run: ./code/office/demos/demo/gradlew clean build
+    - name:
+      run: ls -ltr build
+#     - name: Build and push docker image
+#       uses: mr-smithers-excellent/docker-build-push@v5
+#       with:
+#         image: rssharma/rahul-docker-repo
+#         tags: v1, latest
+#         registry: docker.io
+#         dockerfile: ./code/office/demos/demo/Dockerfile
+#         username: ${{ secrets.DOCKER_USERNAME }}
+#         password: ${{ secrets.DOCKER_PASSWORD }}
