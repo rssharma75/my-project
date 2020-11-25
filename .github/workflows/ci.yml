@@ -24,8 +24,11 @@ jobs:
       run: chmod +x code/office/demos/demo/gradlew
     - name: Build with Gradle
       run: ./code/office/demos/demo/gradlew build
-    - name:
-      run: ls -ltr ./code/office/demos/demo/build
+    - name: Check the build contents
+      run: |
+            ls -ltr ./code/office/demos/demo/
+            ls -ltr 
+      
 #     - name: Build and push docker image
 #       uses: mr-smithers-excellent/docker-build-push@v5
 #       with:
