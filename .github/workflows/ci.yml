@@ -23,7 +23,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x code/office/demos/demo/gradlew
     - name: Build with Gradle
-      run: ./code/office/demos/demo/gradlew clean build
+      run: ./code/office/demos/demo/gradlew build
     - name:
       run: ls -ltr build
 #     - name: Build and push docker image
